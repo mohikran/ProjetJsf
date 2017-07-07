@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<h:outputStylesheet library="css" name="config.css" />
+
+<title>Insert title here</title>
+</head>
+<h:body>
+	<ui:composition template="template.xhtml">
+
+		<ui:define name="content">
+
+			<h:form>
+				<h3>Login</h3>
+				<h:panelGrid columns="3">
+					<h:outputLabel for="prenom">Prenom</h:outputLabel>
+					<h:inputText value="#{personneBeans.personne.prenom}" id="nom"
+						required="true" />
+					<br />
+					<br />
+
+					<h:outputLabel for="nom">nom</h:outputLabel>
+					<h:inputText value="#{personneBeans.personne.nom}" id="prenom"
+						required="true" />
+					<br />
+					<br />
+					<h:outputLabel for="nom">age</h:outputLabel>
+					<h:inputText value="#{personneBeans.personne.age}" id="age"
+						required="true" />
+					<br />
+					<br />
+
+
+					<h:commandButton value="Submit" action="#{personneBeans.affichage}"></h:commandButton>
+
+				</h:panelGrid>
+			</h:form>
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

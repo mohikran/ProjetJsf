@@ -1,0 +1,74 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	 xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Premiere page</title>
+	<h:outputStylesheet library="css" name="config.css" />
+	<h:outputScript library="js" name="secondjs.js" />
+
+</h:head>
+<body>
+
+	<h1>TP JSF entrainement</h1>
+	<h:graphicImage id="john"
+		value="http://cdn.images.express.co.uk/img/dynamic/79/590x/11f38wayne1-469761.jpg" />
+
+
+
+
+	<div>
+		Qui es-tu cowboy?
+
+		<h:form>
+			<h3>Login</h3>
+			<h:panelGrid columns="2">
+				<h:outputLabel for="prenom">Prenom</h:outputLabel>
+				<br />
+				<h:inputText value="#{personneBeans.personne.prenom}" id="nom"
+					required="true" requiredMessage="Donne un nom cowboy" />
+				<br />
+				<h:message for="nom" style="color:red" />
+				<br />
+				<br />
+
+				<h:outputLabel for="nom">nom</h:outputLabel>
+				<br />
+				<h:inputText value="#{personneBeans.personne.nom}" id="prenom"
+					required="true" requiredMessage="Donne un prenom cowboy" />
+				<br />
+				<h:message for="prenom" style="color:red" />
+
+				<br />
+				<br />
+				<h:outputLabel for="nom">age</h:outputLabel>
+				<br />
+				<h:inputText value="#{personneBeans.personne.age}" id="age"
+					required="true" requiredMessage="Donne un age cowboy" >
+				<f:validateLongRange minimum="18" /></h:inputText>
+				<h:message for="age" style="color:red" />
+
+				<br />
+				<br />
+
+
+				<h:commandButton value="Submit" action="#{personneBeans.affichage}"></h:commandButton>
+
+			</h:panelGrid>
+		</h:form>
+
+
+	</div>
+
+<p:link outcome="cowboy" value="Devient un cowboy">
+    <f:param name="productId" value="10" />
+</p:link>
+
+</body>
+</html>

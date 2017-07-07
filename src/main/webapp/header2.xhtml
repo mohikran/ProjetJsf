@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:p="http://primefaces.org/ui"
+  xmlns:b="http://bootsfaces.net/ui"
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:outputStylesheet library="css" name="config.css" />
+
+<title>Insert title here</title>
+</head>
+<body>
+ <ui:composition>
+ <b:container>
+  <h:body style="padding: 60px;">
+        <b:navBar brand="ProxiBanque, votre banque de proximité" brandHref="#" fixed="top" inverse="true">
+            <b:navbarLinks>
+                <b:navLink value="Login" href="page2.xhtml"></b:navLink>
+                <b:navLink value="About" href="#about"></b:navLink>
+                <b:navLink value="Contact" href="#contact"></b:navLink>
+            </b:navbarLinks>
+        </b:navBar>
+<p:imageCompare leftImage="http://www.johnwayneslotmachine.com/img/slides/more-banner.jpg"
+                        rightImage="https://www.americaremembers.com/wp-content/uploads/2013/07/JohnWayneBanner-1.jpg"
+                        width="800" height="200"/>
+    </h:body>
+ </b:container>
+ </ui:composition>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<h:body>
+ <ui:composition template="template.xhtml">
+
+<ui:define name = "content">
+<h1> T'es un cowboy maintenant !</h1>
+
+<center>
+<p:panelGrid columns="3">
+    <f:facet name="header">
+        <h:graphicImage url="https://s-media-cache-ak0.pinimg.com/originals/f1/a7/96/f1a796093d7eeb61747aad4f1e261e8f.jpg"  width="80" height="80"/>
+    </f:facet>
+ 
+    <h:outputText value="Nom:" />
+    <h:outputText value="#{personneBeans.personne.nom}" />
+ 
+    <h:outputText value="Prenom:" />
+    <h:outputText value="#{personneBeans.personne.prenom}" />
+ 
+    <h:outputText value="Age" />
+    <h:outputText value="#{personneBeans.personne.age}" />
+ 
+
+</p:panelGrid>
+<br />
+ <p:graphicImage styleClass="img-responsive" url="
+http://68.media.tumblr.com/4859cc3baee8b45b4b7407c943d8828e/tumblr_inline_nq5ukbQJg51rumiak_400.gif" />
+</center>
+ </ui:define>
+
+ </ui:composition>
+</h:body>
+</html>

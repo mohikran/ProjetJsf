@@ -1,0 +1,10 @@
+com\formation\presentation\PersonneBeans.class
+com\formation\service\IPersonneService.class
+com\formation\dao\HibernateDAO.class
+com\formation\domaine\test.class
+com\formation\domaine\Personne.class
+com\formation\presentation\launcher.class
+com\mkyong\common\HelloBean.class
+com\formation\service\PersonneService.class
+com\formation\dao\IPersonneDAO.class
+com\formation\dao\PersonneDAO.class

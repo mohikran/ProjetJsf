@@ -1,0 +1,131 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Premiere page</title>
+<h:outputStylesheet library = "css" name = "config.css" /> 
+<h:outputScript library = "js" name = "secondjs.js" /> 
+
+</h:head>
+<body>
+
+	<h1>TP JSF entrainement</h1>
+<h:graphicImage id="john" 
+   value = "http://cdn.images.express.co.uk/img/dynamic/79/590x/11f38wayne1-469761.jpg"/> 
+
+	<h:form id="form">
+
+	texte en clair, numero 1
+	<h:inputText id="argent" value="ici" />
+		<h:commandButton id="guessButton" value="Donne moi!" />
+
+		<br />
+		<br />
+
+
+	</h:form>
+	<br />
+	<br />
+	<h:form id="form2">
+
+	texte en cache, numero 2
+	<h:inputSecret id="argent2" value="ici" />
+		<h:commandButton id="guessButton" value="Donne moi!" />
+
+		<br />
+		<br />
+	</h:form>
+	<br />
+	<br />
+	<div>
+	
+		Numero 3 liste deroulante
+		<h:selectOneMenu value="#{userData.data}">
+			<f:selectItem itemValue="1" itemLabel="Item 1" />
+			<f:selectItem itemValue="2" itemLabel="Item 2" />
+			<f:selectItem itemValue="3" itemLabel="Item 3" />
+
+			<f:selectItem itemValue="4" itemLabel="Item 4" />
+
+		</h:selectOneMenu>
+	</div>
+
+	<br />
+	<br />
+
+	<div>
+		Numero 4, case a cocher
+		<h:selectManyCheckbox value="ici"
+			layout="PageDirection">
+			<f:selectItem itemValue="Virement" itemLabel="Virement" />
+			<f:selectItem itemValue="Emprunt" itemLabel="Emprunt" />
+			<f:selectItem itemValue="Fermture" itemLabel="Fermture" />
+		</h:selectManyCheckbox>
+	</div>
+	<br />
+	<br />
+
+	<div>Numero 5 label</div>
+	<h:inputText id="name">
+		<h:outputLabel for="name" value="Enter your name: " />
+	</h:inputText>
+
+	<br />
+	<br />
+
+	<div>
+		Numero 6 lien
+		<h:outputLink value="https://cdn.shopify.com/s/files/1/1029/3967/products/ABITBOL_b92853ea-20c2-4961-9771-6cc83f7499e8_1024x1024.png?v=1453386691">Merci</h:outputLink>
+	</div>
+
+	<br />
+	<br />
+
+
+	<div>
+		Numero 7 bouton radio
+		<h:selectOneRadio value="Ta place" layout="PageDirection">
+			<f:selectItem itemValue="banquier" itemLabel="Je suis banquier" />
+			<f:selectItem itemValue="client" itemLabel="Je suis client" />
+			<f:selectItem itemValue="employe" itemLabel="Je suis employe" />
+		</h:selectOneRadio>
+
+	</div>
+
+	<br />
+	<br />
+
+
+	<div>
+		Numero 8 Bouton soumission form
+
+		<h:form>
+			<h3>Login</h3>
+			<h:panelGrid columns="3">
+				<h:outputLabel for="cname">UserName</h:outputLabel>
+				<h:inputText value="UserName" id="cname"></h:inputText>
+				<br />
+				<br />
+
+				<h:outputLabel for="Id">Mdp</h:outputLabel>
+				<h:inputText value="Mdp"></h:inputText>
+				<br />
+				<br />
+
+				<h:commandButton value="Submit"></h:commandButton>
+
+			</h:panelGrid>
+		</h:form>
+
+
+	</div>
+
+
+</body>
+</html>
