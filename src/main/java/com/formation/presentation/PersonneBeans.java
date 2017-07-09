@@ -81,6 +81,15 @@ public class PersonneBeans implements Serializable {
 
 	} 
 	
+	public void addPersonne(){
+		System.out.println("addPersonne bean");
+
+		pServ2.insertPersonne( personne);
+	}
 	
+	public void removePersonne(){
+		System.out.println("RemovePersonne bean");
+		pServ2.removePersonne(personne);
+	}
 
 }

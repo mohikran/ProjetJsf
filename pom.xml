@@ -222,8 +222,8 @@
 			<!-- WildFly plug-in to deploy the WAR -->
 			<plugin>
 				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>${version.wildfly.maven.plugin}</version>
+    <artifactId>wildfly-maven-plugin</artifactId>
+    <version>1.0.2.Final</version>
 			</plugin>
 		</plugins>
 	</build>

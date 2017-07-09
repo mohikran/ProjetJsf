@@ -8,4 +8,7 @@ public interface IPersonneService {
 
 	List<Personne> getPersonneListDao();
 
+	 void insertPersonne (Personne personne);
+	 
+	 void removePersonne(Personne personne);
 }

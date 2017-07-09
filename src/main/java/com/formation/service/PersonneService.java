@@ -14,32 +14,44 @@ import com.formation.domaine.Personne;
 
 @Named
 @SessionScoped
-public class PersonneService  implements Serializable, IPersonneService {
+public class PersonneService implements Serializable, IPersonneService {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	//@Inject
-	//IPersonneDAO personneDAO;
-	
+
+	// @Inject
+	// IPersonneDAO personneDAO;
+
 	@Inject
 	HibernateDAO hibDAO;
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.jboss.as.quickstarts.numberguess.IPersonneService#personnelist()
 	 */
-	public List<Personne> getPersonneListDao(){
-		//return personneDAO.personnelist();
+	public List<Personne> getPersonneListDao() {
+		// return personneDAO.personnelist();
 		return hibDAO.personneListDao();
-		
-		
-	}
 
 	}
-	
-	
-	
-	
 
+	public void insertPersonne(Personne personne) {
+
+		hibDAO.addPersonne(personne);
+	}
+
+	@Override
+	public void removePersonne(Personne personne) {
+		// TODO Auto-generated method stub
+		System.out.println("RemovePersonne Service");
+		System.out.println("Personne : " + personne);
+
+
+		hibDAO.removePersonne(personne);
+	}
+	
+	
+}

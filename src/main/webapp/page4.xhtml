@@ -22,7 +22,7 @@
 
 
 </center>
-<p:dataTable var="personne" value="#{personneBeans.listePersonne}">
+<p:dataTable id ="tablelist" var="personne" value="#{personneBeans.listePersonne}">
     <p:column headerText="Prenom">
         <h:outputText value="#{personne.prenom}" />
     </p:column>
@@ -34,7 +34,11 @@
     <p:column headerText="Age">
         <h:outputText value="#{personne.age}" />
     </p:column>
- 
+ <p:column headerText="Supprimer">
+         <p:commandButton icon="ui-icon-trash" title="Icon Only" immediate="true" tabindex="6" actionListener="#{personneBeans.removePersonne}">
+               <f:ajax   render="tablelist" />
+            </p:commandButton>
+    </p:column>
 
 </p:dataTable>
  </ui:define>

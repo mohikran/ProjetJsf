@@ -4,13 +4,13 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<h:outputStylesheet library="css" name="config.css" />
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:outputStylesheet library="css" name="config.css" />
 
-<title>Insert title here</title>
-</head>
-<body>
+	<title>Insert title here</title>
+</h:head>
+<h:body>
 	<ui:composition>
 		<div class="ui-g">
 			<div class="ui-g-12 ui-md-6 ui-lg-6"></div>
@@ -19,21 +19,25 @@
 			</div>
 
 		</div>
-		
+
 		<div class="ui-g">
 			<div class="ui-g-12 ui-md-12 ui-lg-12">
 
-			<b:navBar brand="ProxiBanque, votre banque de proximité"
-				brandHref="#"  inverse="true">
-				<b:navbarLinks>
-					<b:navLink value="Login" href="page2.xhtml"></b:navLink>
-					<b:navLink value="About" href="#about"></b:navLink>
-					<b:navLink value="Contact" href="#contact"></b:navLink>
-				</b:navbarLinks>
-			</b:navBar>
+				<b:navBar brand="ProxiBanque, votre banque de proximité"
+					brandHref="#" inverse="true">
+					<b:navbarLinks>
+						<b:navLink value="Login" href="page2.xhtml"></b:navLink>
+						<b:navLink value="Creationclient" href="creationclient.xhtml"></b:navLink>
+						<b:navLink value="listeClients" href="page4.xhtml"></b:navLink>
+
+						<b:navLink value="Supprimerclient" href="supprimerclient.xhtml"></b:navLink>
+
+						<b:navLink value="Contact" href="#contact"></b:navLink>
+					</b:navbarLinks>
+				</b:navBar>
 			</div>
 		</div>
 
 	</ui:composition>
-</body>
+</h:body>
 </html>
