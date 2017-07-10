@@ -59,11 +59,10 @@ public class HibernateDAO implements Serializable {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		System.out.println("RemovePersonne DAO");
+		tx.begin();
+		em.remove(em.merge(personne));
 		tx.commit();
-		em.merge(personne);
-		em.remove(personne);
-
-		// em.close();
-		// emf.close();
+		em.close();
+		 emf.close();
 	}
 }

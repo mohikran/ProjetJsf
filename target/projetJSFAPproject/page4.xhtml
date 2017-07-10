@@ -15,13 +15,9 @@
 <ui:define name = "content">
 <h1> Felicitations vous etes connecte avec l'ID  #{personne.prenom}</h1>
 
-<center>
-
-
-
-
-
-</center>
+<div class="ui-g-2"></div>
+<div class="ui-g-8">
+<h:form>
 <p:dataTable id ="tablelist" var="personne" value="#{personneBeans.listePersonne}">
     <p:column headerText="Prenom">
         <h:outputText value="#{personne.prenom}" />
@@ -35,12 +31,17 @@
         <h:outputText value="#{personne.age}" />
     </p:column>
  <p:column headerText="Supprimer">
-         <p:commandButton icon="ui-icon-trash" title="Icon Only" immediate="true" tabindex="6" actionListener="#{personneBeans.removePersonne}">
-               <f:ajax   render="tablelist" />
+         <p:commandButton icon="ui-icon-trash"  action="#{personneBeans.removePersonne}">
+              <f:setPropertyActionListener 
+                  target="#{personneBeans.personne}" 
+                  value="#{personne}" />
             </p:commandButton>
     </p:column>
 
+
 </p:dataTable>
+</h:form>
+</div>
  </ui:define>
 
  </ui:composition>
